@@ -206,7 +206,7 @@ export default function Home() {
     return Array.from({ length: passengers }, (_, i) => {
       const errorKey = `birth${i}`;
       const errorMessage = errors[errorKey];
-      const hasError = typeof errorMessage === 'string';
+      const hasError = typeof errorMessage === 'string' && errorMessage.length > 0;
 
       return (
         <div key={i} className="mb-4 relative">
@@ -348,7 +348,7 @@ export default function Home() {
             <div className="text-center lg:text-right flex-grow">
               <h2 className="text-3xl lg:text-4xl font-bold text-teal-800 mb-4">נעים להכיר, {contactInfo.name}</h2>
               <p className="text-lg text-gray-700 mb-5 leading-relaxed">
-                מומחה לביטוחי נסיעות עם ותק וניסיון של שנים רבות. המטרה שלי היא לא רק למכור לכם פוליסה, אלא להתאים לכם באופן אישי את הכיסוי המדויק שאתם צריכים, במחיר הוגן ועם שירות אישי וזמין - לפני הנסיעה, במהלכה וגם אם חלילה קורה משהו.
+                מומחה לביטוחי נסיעות עם ותק וניסיון של שנים רבות. המטרה שלי היא לא רק למכור לכם פוליסה, אלא להתאים לכם באופן אישי את הכיסוי המדויק שאתם צריכים, במחיר הוגן ועם שירות אישי וזמין - לפני הנסיעה, במהלכה וIvגם אם חלילה קורה משהו.
               </p>
               <p className="text-gray-600 mb-6">
                 אני מזמין אתכם למלא את הפרטים בטופס למטה או פשוט לשלוח לי הודעה בוואטסאפ ונמצא יחד את הפתרון המושלם לחופשה הבטוחה שלכם.
